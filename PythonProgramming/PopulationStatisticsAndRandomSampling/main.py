@@ -11,7 +11,6 @@ lambda_value = 10
 N = 10000
 DataPopulation = np.random.poisson(lam=lambda_value, size=N)
 
-
 # Step 2: Draw a random subset of n = 30 samples from DataPopulation
 n = 200
 DataSample = np.random.choice(DataPopulation, size=n, replace=False)
@@ -28,7 +27,6 @@ print("Population mean:", mean_population)
 print("Population Standard Deviation:", std_population)
 print("Sample Mean:", mean_sample)
 print("Sample Standard Deviation", std_sample)
-
 
 # Generate a histogram of DataPopulation
 plt.figure(figsize=(10, 6))
@@ -48,8 +46,6 @@ plt.legend()
 plt.show()
 
 
-
-
 n = 30  # sample size
 m = 100  # number of samples to take
 
@@ -63,7 +59,6 @@ for i in range(m):
     SampleMeans[i] = np.mean(DataSample)
     SampleSTDs[i] = np.std(DataSample)
 
-
 # Plot a histogram of the SampleMeans
 plt.figure(figsize=(10, 6))
 plt.hist(SampleMeans, bins=15, color='red', edgecolor='black', alpha=0.7)
@@ -72,9 +67,6 @@ plt.xlabel('Sample Mean')
 plt.ylabel('Frequency')
 plt.grid(True)
 plt.show()
-
-
-
 
 # Calculate the population mean and std deviation
 mean_population = np.mean(DataPopulation)
@@ -98,4 +90,3 @@ plt.ylabel('Density')
 plt.title('Histogram of Sample Means with Normal Approximation')
 plt.legend()
 plt.show()
-

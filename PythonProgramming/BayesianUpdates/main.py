@@ -48,6 +48,7 @@ for i, flip in enumerate(coin_flips):
     print(f'After observing {i + 1} flips ({flip}): Posterior alpha = {prior_alpha}, beta = {prior_beta}')
 
 
+
 # Plot the evolution of the posterior distributions
 theta_range = np.linspace(0, 1, 100)
 plt.figure(figsize=(10, 6))
